@@ -34,6 +34,12 @@ def step_impl(context, criteria):
         context.result = result
         context.message = message
 
+    if criteria == 'study':
+        result, message = get_game_name(context.games, context.name)
+        print(result)
+        context.result = result
+        context.message = message
+
 
 @then("{total} games will match")
 def step_impl(context, total):
@@ -58,3 +64,7 @@ def step_impl(context, message):
 	print(message)
 	print(context.message)
 	assert context.message == message
+
+@given('the user enters the study: {study}')
+def step_impl(context, study):
+	context.developer = study

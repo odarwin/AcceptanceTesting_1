@@ -9,8 +9,13 @@ if __name__ == '__main__':
 	game_C = Game( "The Legend of Zelda: Breath of the Wild",2017,"Nintendo","E")
 	game_D = Game( "Final Fantasy XV", 2016,"Square Enix", "T")
 	game_E = Game( "Marvel's Spider-Man",2018,"Insomniac Games","T")
+	game_F = Game( "The Last of Us  ",2013,"Naughty Dog ","M")
+	game_G = Game( "Super Smash Bros. Ultimate",2018,"Bandai Namco Studios","E")
+	game_H = Game( "Splatoon's Spider-Man",2016,"Nintendo","T")
+	game_I = Game( "The Witcher 3: Wild Hunt",2015,"CD Projekt","M")
 
-	game_list = [game_A, game_B, game_C, game_D, game_E]
+
+	game_list = [game_F, game_G, game_I, game_H]
 
 	result, msj = get_game_name(game_list, "Devil")
 	print(msj)
@@ -24,7 +29,7 @@ if __name__ == '__main__':
 		print(x)
 	print("-"*20)
 
-	result, msj, error = get_game_rating(game_list, ["E", "M"])
+	result, msj, error = get_game_rating(game_list, ["M", "T"])
 	print(msj)
 	for x in result:
 		print(x)
@@ -36,6 +41,8 @@ if __name__ == '__main__':
 	for x in result:
 		print(x)
 	print("-"*20)
+
+
 
 	result, msj = get_game_developer(game_list, "Square Enix")
 	print(msj)
